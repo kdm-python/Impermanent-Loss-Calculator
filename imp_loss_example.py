@@ -5,15 +5,18 @@ import math
 ##################################
 
 def calcQuantities(priceConstant, priceRatio):
-    """Calculate quantity of assets in the pool at any price point."""
+    """
+    Calculate quantity of assets in the pool at any price point.
+    Doesn't work with the imp loss function yet, not sure why.
+    """
     print('calculate the base and token quantities for the pool.')
     print(f'price constant = {priceConstant}')
     print(f'price ratio = {priceRatio}')
     
-    baseQty = math.sqrt(priceConstant / priceRatio)
+    baseQty = int(math.sqrt(priceConstant / priceRatio))
     print(f'base quantity: {baseQty}')
 
-    tokenQty = math.sqrt(priceConstant * priceRatio)
+    tokenQty = int(math.sqrt(priceConstant * priceRatio))
     print(f'token quantity: {tokenQty}')
     
     return baseQty, tokenQty
