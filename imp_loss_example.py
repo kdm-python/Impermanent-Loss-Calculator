@@ -28,7 +28,7 @@ def calcImpermanentLoss(baseQty, tokenQty, futurePriceRatio):
     Need to look up what hodl strat, lp strat & FPR mean.
     """
     productConstant = baseQty * tokenQty
-    print(f'product constant = {baseQty} * {tokenQty} = {productConstant}')
+    print(f'product constant = baseQty {baseQty} * token Qty {tokenQty} = {productConstant}')
     
     # hoddling strategy
     hodlStrategy = ((tokenQty * futurePriceRatio) + baseQty)
@@ -48,9 +48,8 @@ def test():
     
     print('* Example: UNI/ETH pool contains 12605 ETH and 1459747 UNI tokens *\n')
     print('assume Uniswap doubles in value relative to ETH')
-    priceRatio = 0.01727  # look this up
+    priceRatio = 0.01727
     print(f'so price ratio will be {priceRatio}\n')
     imp_loss = calcImpermanentLoss(12605, 1459747, priceRatio)
-    return imp_loss
 
 test()
