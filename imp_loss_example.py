@@ -5,7 +5,7 @@ import math
 ##################################
 
 def calcQuantities(priceConstant, priceRatio):
-    """Calculate quantity of assets based on constant & ratio."""
+    """Calculate quantity of assets in the pool at any price point."""
     print('calculate the base and token quantities for the pool.')
     print(f'price constant = {priceConstant}')
     print(f'price ratio = {priceRatio}')
