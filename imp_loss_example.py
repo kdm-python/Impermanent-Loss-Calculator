@@ -23,7 +23,7 @@ def calcImpermanentLoss(baseQty, tokenQty, futurePriceRatio):
 
     impermanentLoss = (hodlStrategy - lpStrategy) / hodlStrategy * 100
 
-    return impermanentLoss
+    return round(impermanentLoss, 2)
 
 class Asset:
     """Represents a specific asset type i.e. a coin or token."""
@@ -113,7 +113,7 @@ Total liquidity: {self.baseTotal}
         
 Token Asset: {self.tokenAsset}
 Quantity in pool: {self.tokenQty}
-Total liquidity: {self.baseTotal}
+Total liquidity: {self.tokenTotal}
 '''
         return s
 
