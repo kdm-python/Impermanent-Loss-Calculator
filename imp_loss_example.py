@@ -38,7 +38,7 @@ def calcImpermanentLoss(baseQty, tokenQty, futurePriceRatio):
     
     impermanentLoss = (hodlStrategy - lpStrategy) / hodlStrategy * 100
     
-    print(f'impermanent loss = {impermanentLoss}')
+    print(f'impermanent loss = {round(impermanentLoss, 1)}%')
     return impermanentLoss
 
 def test():
