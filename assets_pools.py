@@ -16,10 +16,10 @@ class Asset:
         self.price = price  # float, current pool price of this asset
         self.priceHistory = {date: price}  # dict of dates: prices, could be daily or weekly
         self.id = Asset.assetID
+        # maybe initialise the total pool values here instead?
         Asset.assetID += 1
 
     def getName(self):
-        """Return name of asset."""
         return self.name
 
     def getPrice(self):
@@ -56,7 +56,7 @@ class Coin(Asset):
     pass
 
 class Token(Asset):
-    """Represents the token in the pool. Attributes specific on tokens?"""
+    """Represents the token in the pool. Attributes specific to tokens?"""
     pass
 
 class Pool:
@@ -70,7 +70,6 @@ class Pool:
         self.tokenQty = tokenQty  # float
 
     def getName(self):
-        """Return name of pool."""
         return self.poolName
 
     def getCoinAsset(self):
